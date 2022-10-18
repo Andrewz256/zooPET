@@ -9,52 +9,198 @@ body {
     font-size: 15px;
     max-width: 1600px;
     min-height: 100vh;
+    margin: 0 auto;
+    display: grid;
+    grid-template: 100px auto 445px / 1fr;
+
+}
+.ul {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    
     
 }
+
+.wrapper {
+    margin: 0 auto;
+    display: grid;
+    max-width: 1200px;
+}
+.btn {
+    border-radius: 5px;
+    background-color: orange;
+    color: white;
+    width: 300px;
+    height: 55px;
+}
+
+/*-------------- HEADER --------------*/
 .header {
-    
+
+    grid-row: 1 / 2;
     width: 100%;
     background-color: black;
 
 }
-.wrapper {
-    margin: 0 auto;
-    display: grid;
-    column-gap: 5px;
-    height: 100px;
-    width: 1200px;
-    grid-template-columns: 200px auto 200px;
+.header__wrapper {
+    height: 80px;
+    column-gap: 15px;
+    grid-template-columns: 200px auto 300px;
     grid-template-rows: 100px;
     align-items: center;
 }
-.main-logo {
+.main__logo {
     grid-column: 1;
     color: wheat;
     text-align: end;
     font-size: 30px;
-    border: red 1px dotted;
+    
 }
 .navigation {
     width: 100%;
     grid-column: 2;
-    border: red 1px dotted;
+    
 
 }
-.burger-menu {
+.burger__menu {
     display: none;
 }
-.menu {
+.header__menu {
     width: 400px;
     color: wheat;
 }
-.ul-menu {
-    list-style-type: none;
-    display: flex;
-    flex-wrap: wrap;
+.hmenu__ul {
     justify-content:space-evenly;
 }
-.copyright {
+.header__copyright {
     color: wheat;
     grid-column: 3;
-    border: red 1px dotted;
+    
 }
+
+
+/*-------------- HEADER__END --------------*/
+
+/*-------------- MAIN --------------*/
+.main {
+    grid-row: 2 / 3;
+    width: 100%;
+    display: grid;
+    grid-template: repeat (5, minmax(1fr, min-content)) / 1fr;
+}
+.main__header {
+    max-width: 1600px ;
+    height: 700px;
+    background: no-repeat url("/assets/panda_bg.jpg") center;
+    background-size: cover;
+    
+}
+.how__it__works {
+    padding-top: 140px;
+    max-width: 1200px;
+    height: 400px;
+    
+}
+.main__gallery {
+    
+}
+.pick__and__feed {
+    
+}
+.testimonials {
+    
+}
+
+
+/*-------------- MAIN_END --------------*/
+
+/*-------------- FOOTER --------------*/
+.footer {
+    grid-row: 3;
+    background-color: black;
+    color: wheat;
+    width: 100%;
+    padding: 40px 0px 50px 0px;
+    
+}
+
+.footer__wrapper {
+    grid-template: 1fr 1fr 1fr / repeat(3, 1fr);
+    height: 100%;
+    align-items: center;
+    
+    
+}
+
+.footer__logo {
+    font-size: 23px;
+
+    text-align: center;
+    
+    grid-column: span 2;
+    align-self: start;
+    width: 82px;
+    height: 52px;
+    
+    
+}
+.subscribe {
+    justify-self: right;
+    align-self:baseline;
+    font-size: 24px;
+    line-height: 30px;
+
+}
+.p__subscribe {
+    padding-bottom: 14px;
+}
+.input__subscribe input {
+    padding: 10px;
+    height: 42px;
+    width: 228px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+.input__subscribe button {
+    height: 42px;
+    width: 129px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+.donate__btn {
+    
+    grid-column: span 3;
+    text-transform: uppercase;
+}
+
+.flink__list {
+    align-self: end;
+    list-style-type: none;
+    font-size: 20px;
+    line-height: 35px;
+    
+}
+.footer__menu {
+    line-height: 35px;
+    align-self: end;
+    
+}
+.fmenu__ul {
+    justify-content:space-evenly;
+    
+}
+.footer__copyright {
+    
+    font-size: 16px;
+    line-height: 25px;
+    color: rgb(153, 152, 152);
+    align-self: end;
+    justify-self: right;
+    
+}
+.link {
+    text-decoration: none;
+    color: rgb(153, 152, 152);
+}
+/*-------------- FOOTER__END --------------*/
