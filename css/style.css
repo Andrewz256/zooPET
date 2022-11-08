@@ -10,8 +10,7 @@ body {
     max-width: 1600px;
     min-height: 100vh;
     margin: 0 auto;
-    display: grid;
-    grid-template: 100px auto 445px / 1fr;
+
 
 }
 .ul {
@@ -22,11 +21,6 @@ body {
     
 }
 
-.wrapper {
-    margin: 0 auto;
-    display: grid;
-    max-width: 1200px;
-}
 .btn {
     border-radius: 5px;
     background-color: orange;
@@ -37,21 +31,23 @@ body {
 
 /*-------------- HEADER --------------*/
 .header {
-
-    grid-row: 1 / 2;
     width: 100%;
-    background-color: black;
+    height: 780px;
+    background: no-repeat url("/assets/panda_bg.jpg") center;
+    background-size: cover;
 
 }
+
+/*-------------- HEADER WRAPPER--------------*/
 .header__wrapper {
+    display: grid;
+    grid-template-columns: 320px auto 320px;
     height: 80px;
-    column-gap: 15px;
-    grid-template-columns: 200px auto 300px;
-    grid-template-rows: 100px;
     align-items: center;
+    background-color: black;
 }
 .main__logo {
-    grid-column: 1;
+
     color: wheat;
     text-align: end;
     font-size: 30px;
@@ -59,8 +55,6 @@ body {
 }
 .navigation {
     width: 100%;
-    grid-column: 2;
-    
 
 }
 .burger__menu {
@@ -75,8 +69,35 @@ body {
 }
 .header__copyright {
     color: wheat;
-    grid-column: 3;
+
     
+}
+/*-------------- HEADER WRAPPER END--------------*/
+
+.circle__div {
+    width: 465px;
+    height: 465px;
+    background-color: orange;
+    border-radius: 50%;
+    margin-top: 12px;
+    margin-left: 50%;
+    padding-top: 74px;
+    padding-left: 74px;
+}
+.watch__div {
+    width: 500px;
+    height: 400px;
+    font-family: 'Roboto';
+    font-style: normal;
+    text-align: center;
+    color: white;
+    font-size: 105px;
+    line-height: 80px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.favorite {
+    color: #ffee2e;
 }
 
 
@@ -84,22 +105,17 @@ body {
 
 /*-------------- MAIN --------------*/
 .main {
-    grid-row: 2 / 3;
+    
     width: 100%;
     display: grid;
     grid-template: repeat (5, minmax(1fr, min-content)) / 1fr;
 }
-.main__header {
-    max-width: 1600px ;
-    height: 700px;
-    background: no-repeat url("/assets/panda_bg.jpg") center;
-    background-size: cover;
-    
-}
+
 .how__it__works {
     padding-top: 140px;
     max-width: 1200px;
     height: 400px;
+    
     
 }
 .main__gallery {
@@ -117,20 +133,22 @@ body {
 
 /*-------------- FOOTER --------------*/
 .footer {
-    grid-row: 3;
+    
     background-color: black;
     color: wheat;
     width: 100%;
     padding: 40px 0px 50px 0px;
     
+    
 }
 
 .footer__wrapper {
+    display: grid;
+    max-width: 1200px;
     grid-template: 1fr 1fr 1fr / repeat(3, 1fr);
     height: 100%;
-    align-items: center;
-    
-    
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .footer__logo {
